@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Pesquisa sobre sonhos</h2>
+            <p>A pesquisa tem como objetivo, descobrir quais sonhos materiais (Ex:
+                Casa, Carro..) a sociedade mais tem desejo em conquistar, de acordo com a faixa etária do individuo e a
+                idade em que o
+                mesmo acha que realizará tal sonho.
+            </p>
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="Name">Seu nome completo:</label>
+                <input type="text" id="Name" placeholder="Digite seu nome completo..." />
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            <div class="form-control">
+                <label for="sonho">Seu atual sonho <span style="color: #ff713c;">material</span>:</label>
+                <input type="text" id="sonho" placeholder="Digite seu atual sonho material..." />
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            <div class="form-control">
+                <label for="age">Sua idade:</label>
+                <input type="number" id="age" placeholder="Digite sua idade..." />
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            <div class="form-control">
+                <label for="targetAge">Idade que deseja realizar seu sonho:</label>
+                <input type="number" id="targetAge" placeholder="Digite a idade que pretende conquistar seu sonho..." />
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/a6bffd97e0.js" crossorigin="anonymous"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
