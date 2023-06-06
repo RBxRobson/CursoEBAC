@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <header>
+                <h1>To-do list|RB</h1>
+            </header>
+            <form>
+                <input id="input-task" type="text" required placeholder="Digite sua tarefa">
+                <button title="Clique para adicionar sua tarefa" class="btn-add-task">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </form>
+        </div>
+        <div class="task-container">
+            <button title="Clique para fechar" id="btn-close-list">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="task-list"></ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/a6bffd97e0.js" crossorigin="anonymous"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
