@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --colorMain: #8BC6EC;
+    --strongBlue: #9599E2;
+    --white: #fff;
+    --gray: #dedede;
+    --tkblue: #449bd6;
+    --fullblack: #000;
+    --red: #e74c3c;
+    --green: #2ecc71;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 90%;
+    background-color: var(--white);
+}
+
+header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-main {
+    background-color: var(--colorMain);
+    background-image: linear-gradient(270deg, var(--colorMain) 0%, var(--strongBlue) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 1s;
+}
+
+.title-main:hover {
+    text-shadow: .1rem .1rem .6rem rgba(0, 0, 0, 0.2);
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    flex-direction: column;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 4rem;
+    max-height: 2.5rem;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    padding: 1rem 1rem 0rem 0.3rem;
+    max-width: 98%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.input-box input::-webkit-outer-spin-button,
+.input-box input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--colorMain);
+    background-image: linear-gradient(270deg, var(--colorMain) 0%, var(--strongBlue) 100%);
+    border: none;
+    border-radius: .3rem;
+    padding: .8rem;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.form button:hover {
+    text-shadow: .1rem .1rem .6rem rgba(0, 0, 0, 0.2);
+    font-size: 1.015rem;
+    box-shadow: .1rem .1rem .6rem rgba(0, 0, 0, 0.2);
+    border-radius: .9rem;
+}
+
+.input-box .line {
+    position: relative;
+}
+
+.input-box .line::before {
+    content: '';
+    position: absolute;
+    height: .15rem;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+}
+
+.input-box .line::after {
+    content: '';
+    position: absolute;
+    height: .15rem;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    border-radius: .5rem;
+    background-color: var(--colorMain);
+    background-image: linear-gradient(270deg, var(--colorMain) 0%, var(--strongBlue) 100%);
+    transform: scaleX(0);
+    transition: all .4s ease-in-out;
+    transform-origin: left;
+}
+
+.error .line::after {
+    background-color: var(--red);
+    background-image: none;
+}
+
+.valid .line::after {
+    background-color: var(--green);
+    background-image: none;
+}
+
+.input-box input:focus~.line::after {
+    transform: scaleX(1);
+}
+
+.input-box label {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    pointer-events: none;
+    transition: .9s;
+    opacity: .5;
+    font-size: 1rem;
+}
+
+.input-box small {
+    position: absolute;
+    left: 0px;
+    top: 46px;
+    color: var(--red);
+    font-size: 1rem;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    transform: translateY(-20px);
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.input-box i {
+    position: absolute;
+    top: 1rem;
+    right: .1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: .9s;
+    color: transparent;
+}
+
+.error i.fa-exclamation-circle {
+    color: var(--red);
+    visibility: visible;
+    opacity: 1;
+}
+
+.valid i.fa-check-circle {
+    color: var(--green);
+    visibility: visible;
+    opacity: 1;
+}
+
+.error label {
+    color: var(--red);
+}
+
+.valid label {
+    color: var(--green);
+}
