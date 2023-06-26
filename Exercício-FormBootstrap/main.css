@@ -1,0 +1,32 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #00cdff 100%);
+}
+
+.container {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 1rem;
+    max-width: 40rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+    margin-bottom: 2rem;
+}
+
+#form button {
+    width: 100%;
+    font-weight: bold;
+    padding: .8rem;
+    font-size: 1.2rem;
+}
+
+.container small {
+    color: #DE4E46;
+}
