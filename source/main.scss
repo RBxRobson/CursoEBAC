@@ -1,0 +1,9 @@
+@use 'config/default.scss';
+@use 'config/variaveis.scss';
+@use 'section.scss';
+@use 'header.scss';
+@use 'mediasQuerie.scss';
+
+body {
+    background-color: variaveis.$bodyColor;
+}
