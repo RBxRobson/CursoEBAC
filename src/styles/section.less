@@ -1,0 +1,35 @@
+@import "maps.less";
+@import "mixins.less";
+
+section {
+    padding: 56px 0;
+
+    .products {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 32.66%);
+        column-gap: 1%;
+        row-gap: 4%;
+        .w-100();
+
+        &-item img {
+            .w-100();
+            border-radius: 16px;
+        }
+
+        &-button {
+            .d-block();
+            background-color: #colors[buttonColor];
+            color: #colors[whiteColor];
+            text-align: center;
+            padding: 8px 0;
+            border-radius: 8px;
+            margin-top: 8px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #colors[btnHoverColor];
+            }
+        }
+    }
+}

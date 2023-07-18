@@ -1,0 +1,47 @@
+@import "variaveis.less";
+@import "maps.less";
+@import "mixins.less";
+@import "header.less";
+@import "section.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #colors[backgroundColor];
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    .w-100();
+    margin: 0 auto;
+
+    @media @breakpointTablet {
+        .w-80();
+
+        .products {
+            grid-template-columns: repeat(2, 48.5%);
+            column-gap: 3%;
+        }
+    }
+
+    @media @breakpointMobile {
+        .w-80();
+
+        .products {
+            .d-block();
+
+            &-item {
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
