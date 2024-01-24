@@ -22,5 +22,10 @@ describe('Testes para a agenda', () => {
         cy.get('.alterar').click()
         cy.get('.sc-iAEyYk').should('include.text', 'Contato Editado')
     })
+
+    it('Deve deletar todos os contatos existentes', () => {
+        cy.get('.delete').click({multiple: true})                          ^
+        cy.get('.sc-iAEyYk').should('not.have.class', 'sc-beqWaB')
+    })
 })
 
