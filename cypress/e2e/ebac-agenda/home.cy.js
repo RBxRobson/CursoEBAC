@@ -12,5 +12,15 @@ describe('Testes para a agenda', () => {
         cy.get('.adicionar').click()
         cy.get('.sc-iAEyYk').should('include.text', 'Robson Barbosa')
     })
+
+    it('Deve editar o primeiro contato da lista', () => {
+        cy.get(':nth-child(2) > .sc-gueYoa > .edit')
+            .click()
+        cy.get('input[type="text"]').clear().type('Contato Editado')
+        cy.get('input[type="email"]').clear().type('exemploeditado@gmail.com')
+        cy.get('input[type="tel"]').clear().type('00 00000000')
+        cy.get('.alterar').click()
+        cy.get('.sc-iAEyYk').should('include.text', 'Contato Editado')
+    })
 })
 
